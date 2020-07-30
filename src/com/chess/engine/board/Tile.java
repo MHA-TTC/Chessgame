@@ -16,9 +16,9 @@ public abstract class Tile {
         final Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
 
         for (int i = 0; i < 64; i++){
-            emptyTileMap.put(i,new EmptyTile(i));
+            emptyTileMap.put(i, new EmptyTile(i));
         }
-        return emptyTileMap;
+        return ImmutableMap.copyOf(emptyTileMap);
     }
 
     //CREATES INDIVIDUAL TILE
